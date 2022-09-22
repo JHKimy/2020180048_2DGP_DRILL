@@ -41,20 +41,18 @@ while True:
         delay(0.001)
 
 
-    x=400
-    y=300
-    z=0
+    z=270
     r=200
 
-    while (z<360):
+    while (z<630):
     
         clear_canvas_now()
         grass.draw_now(400,30)
-        x= r*math.cos(z)+400
-        y=r*math.sin(z)+300
+        x= r*math.cos(z*3.14/180)+400
+        y= r*math.sin(z*3.14/180)+300
         z=z+2
         character.draw_now(x,y)
-        delay(0.001)
+        delay(0.003)
 
 
 close_canvas()
