@@ -26,10 +26,8 @@ def handle_events():
                 state = 0
             elif event.key == SDLK_UP:
                 Y += 1
-                state = 1
             elif event.key == SDLK_DOWN:
                 Y -= 1
-                state = 0
             elif event.key == SDLK_ESCAPE:
                 running = False
 
