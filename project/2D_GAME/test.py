@@ -22,24 +22,12 @@ def handle_events():
         elif event.type == SDL_KEYDOWN:
             if event.key == SDLK_RIGHT:
                 dirX += 1
-            elif event.key == SDLK_LEFT:
-                dirX -= 1
-            elif event.key == SDLK_UP:
-                dirY += 1
-            elif event.key == SDLK_DOWN:
-                dirY -= 1
             elif event.key == SDLK_ESCAPE:
                 running = False
 
         elif event.type == SDL_KEYUP:
             if event.key == SDLK_RIGHT:
                 dirX -= 1
-            elif event.key == SDLK_LEFT:
-                dirX += 1
-            elif event.key == SDLK_UP:
-                dirY -= 1
-            elif event.key == SDLK_DOWN:
-                dirY += 1
 
 open_canvas(TUK_WIDTH, TUK_HEIGHT)
 running = True
@@ -54,7 +42,6 @@ while running:
         handle_events()
         frame = (frame + 1) % 3
         x += dirX * 10
-        y += dirY * 10
         delay(0.01)
 
         if (x > TUK_WIDTH or y > TUK_HEIGHT-90 or x < 0 or y < 90):
