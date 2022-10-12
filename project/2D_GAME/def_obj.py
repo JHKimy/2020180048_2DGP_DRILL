@@ -1,13 +1,21 @@
 from pico2d import *
 
-G_WIDTH, G_HEIGHT = 800, 640
+class BACK:
+    def __init__(self):
+        self.image = load_image('background.png')
+
+    def draw(self):
+        self.image.draw(800//2, 640//2)
+
+class mario:
+    def __init__(self):
+        self.x, self.y =30, 90
+        self.frame = 0
+        self.image = load_image('mari.png')
+        self.state = 3
 
 
-x = 30
-y = 90
 
-
-frame = 0
 dirX = 0
 dirY = 0
 state = 3
@@ -43,7 +51,7 @@ def handle_events():
                 state = 2
 
 
-open_canvas(G_WIDTH, G_HEIGHT)
+open_canvas(840, 600)
 TUK_GROUND = load_image('background.png')
 character = load_image('mari.png')
 running = True

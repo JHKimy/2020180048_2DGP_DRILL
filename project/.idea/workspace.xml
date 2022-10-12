@@ -1,40 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f14296-3096-49b5-9145-9993f740df6d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../08/08 drill.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08/08 drill.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../프로젝트/1차 발표 .pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../프로젝트/2DGP 2020180048 김준현.mp4" beforeDir="false" />
+    <list default="true" id="00262ba4-2ece-413a-9623-1a27ea471984" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/2D_GAME/start_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../animation_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ball21x21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ball41x41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boy_grass_object.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../character.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/Mario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/Mario2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/animation_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario_idle_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario_idle_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario_walk_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/mario_walk_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2D_GAME/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/2D_GAME/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run_animation.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2FfG0qIwczufywSD6Izlahpmo9Q" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2G1D8wWg6iGXkbvybpxo8ldwXek" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="project" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2D_GAME" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2D_GAME/project.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.project" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="00f14296-3096-49b5-9145-9993f740df6d" name="Changes" comment="" />
-      <created>1664875507887</created>
+      <changelist id="00262ba4-2ece-413a-9623-1a27ea471984" name="Changes" comment="" />
+      <created>1665547040860</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1664875507887</updated>
+      <updated>1665547040860</updated>
     </task>
     <servers />
   </component>
