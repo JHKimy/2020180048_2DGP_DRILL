@@ -1,25 +1,63 @@
 from pico2d import *
+import game_framework
+import start_image
 
-class BACK:
+class Background:
     def __init__(self):
         self.image = load_image('background.png')
-
     def draw(self):
         self.image.draw(800//2, 640//2)
 
-class mario:
+class Mario:
     def __init__(self):
-        self.x, self.y =30, 90
+        self.x, self.y = 30, 90
         self.frame = 0
-        self.image = load_image('mari.png')
+        self.image = load_image('mario.png')
         self.state = 3
+        self.dirX = 0
+        self.dirY = 0
+
+    def update(self):
+        self.frame = (self.frame+1) % 3
+        self.x += self.dirX * 5
+
+    def draw(self):
+
+        if self.state == 0 or self.state == 1 :
+            self.image.clip_draw( self.frame * 100, self.state * 100, 100, 100, self.x, self.y )
+        else:
+            self.image.clip_draw(100, self.state * 100, 100, 100, self.x, self.y)
 
 
+    # def handle_events(self):
+    #     self.running
+    #     self.dirX
+    #     self.dirY
+    #     self.state
+    #     self.events = get_events()
+    #
+    #     for event in self.events:
+    #         if event.type == SDL_QUIT:
+    #             self.running = False
+    #         elif event.type == SDL_KEYDOWN:
+    #             if event.key == SDLK_RIGHT:
+    #                 self.dirX += 1
+    #                 self.state = 1
+    #             elif event.key == SDLK_LEFT:
+    #                 self.dirX -= 1
+    #                 self.state = 0
+    #
+    #             elif event.key == SDLK_ESCAPE:
+    #                 self.running = False
+    #
+    #         elif event.type == SDL_KEYUP:
+    #             if event.key == SDLK_RIGHT:
+    #                 self.dirX -= 1
+    #                 self.state = 3
+    #             elif event.key == SDLK_LEFT:
+    #                 self.dirX += 1
+    #                 self.state = 2
 
-dirX = 0
-dirY = 0
-state = 3
-dir_state = 0
 
 def handle_events():
     global running
@@ -28,47 +66,71 @@ def handle_events():
     global state
     events = get_events()
 
+
     for event in events:
+
         if event.type == SDL_QUIT:
             running = False
+
         elif event.type == SDL_KEYDOWN:
             if event.key == SDLK_RIGHT:
-                dirX += 1
-                state = 1
+                char.dirX += 1
+                char.state = 1
             elif event.key == SDLK_LEFT:
-                dirX -= 1
-                state = 0
-
-            elif event.key == SDLK_ESCAPE:
-                running = False
+                char.dirX -= 1
+                char.state = 0
 
         elif event.type == SDL_KEYUP:
             if event.key == SDLK_RIGHT:
-                dirX -= 1
-                state = 3
+                char.dirX -= 1
+                char.state = 3
             elif event.key == SDLK_LEFT:
-                dirX += 1
-                state = 2
+                char.dirX += 1
+                char.state = 2
 
 
-open_canvas(840, 600)
-TUK_GROUND = load_image('background.png')
-character = load_image('mari.png')
-running = True
-
-while running:
-        clear_canvas()
-        TUK_GROUND.draw(G_WIDTH // 2, G_HEIGHT // 2)
-        if state == 0 or state == 1 :
-            character.clip_draw(frame * 100, state * 100, 100, 100, x, y)
-        else :
-            character.clip_draw(100, state * 100, 100, 100, x, y)
-        update_canvas()
-        handle_events()
-        frame = (frame + 1) % 3
-        x += dirX * 5
-        y += dirY * 5
-        delay(0.01)
+        if event.type == SDL_QUIT:
+            game_framework.quit()
+        elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_ESCAPE):
+            game_framework.change_state(start_image)
 
 
-close_canvas()
+
+def enter():
+    global char, back, running
+    char = Mario()
+    back = Background()
+    running = True
+def exit():
+    global char, back
+    del char
+    del back
+def update():
+    char.update()
+def draw():
+    clear_canvas()
+    back.draw()
+    char.draw()
+    update_canvas()
+    delay(0.01)
+
+
+    # handle_events()
+    # delay(0.01)
+
+# open_canvas(800, 640)
+#
+# char = Mario()
+# back = Background()
+# char.running = True
+#
+# while char.running:
+#     clear_canvas()
+#     back.draw()
+#     char.draw()
+#     update_canvas()
+#     char.handle_events()
+#     char.update()
+#     delay(0.01)
+#
+# close_canvas()

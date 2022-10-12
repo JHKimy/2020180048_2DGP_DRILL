@@ -45,13 +45,13 @@ def handle_events():
 
 open_canvas(G_WIDTH, G_HEIGHT)
 TUK_GROUND = load_image('background.png')
-character = load_image('mari.png')
+character = load_image('mario.png')
 running = True
 
 while running:
         clear_canvas()
-        TUK_GROUND.draw(G_WIDTH // 2, G_HEIGHT // 2)
-        if state == 0 or state == 1 :
+        TUK_GROUND.draw(G_WIDTH//2, G_HEIGHT//2)
+        if state == 0 or state == 1:
             character.clip_draw(frame * 100, state * 100, 100, 100, x, y)
         else :
             character.clip_draw(100, state * 100, 100, 100, x, y)
