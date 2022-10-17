@@ -1,7 +1,5 @@
 from pico2d import *
 import game_framework
-import logo_state
-import title_state
 import item_state
 import boy_state
 import random
@@ -16,8 +14,8 @@ class Grass:
 
 class Boy:
     def __init__(self):
-        self.x, self.y =  random.randint(100,700), 90
-        self.frame = random.randint(0,7)
+        self.x, self.y = random.randint(100, 700), 90
+        self.frame = random.randint(0, 7)
         self.dir = 1
         self.image = load_image('animation_sheet.png')
         self.ball_image = load_image('ball21x21.png')
@@ -52,7 +50,7 @@ def handle_events():
     for event in events:
         if event.type == SDL_QUIT:
             game_framework.quit()
-        elif event.type == SDL_KEYDOWN :
+        elif event.type == SDL_KEYDOWN:
             if event.key == SDLK_ESCAPE:
                 game_framework.quit()
             elif event.key == SDLK_i:
@@ -61,36 +59,31 @@ def handle_events():
                 game_framework.push_state(boy_state)
 
 
-boy = None #None==NULL
+
+
+boy = None # None==NULL
 grass = None
 team = []
-# running=True
 
 open_canvas()
 
-#Init
-def enter():
+def enter():   #init
     global boy
     global grass
-    # global running
     boy = Boy()
     grass = Grass()
-    # running = True
 
-#finish
 def exit():
     global boy, grass
     del boy
     del grass
 
-#world object update
 def update():
     boy.update()
     for boy_team in team:
         boy_team.update()
 
 
-#render world
 def draw():
     clear_canvas()
     draw_world()
