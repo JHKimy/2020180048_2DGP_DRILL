@@ -30,9 +30,9 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
 
-boy=None #None==NULL
-grass=None
-running=True
+boy = None #None==NULL
+grass = None
+running =True
 
 open_canvas()
 

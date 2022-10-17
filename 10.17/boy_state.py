@@ -49,15 +49,16 @@ def handle_events():
             match event.key:
                 case pico2d.SDLK_ESCAPE:
                     game_framework.pop_state()
-                case pico2d.SDLK_PLUS:
-                    play_state.Boy() 
+                case pico2d.SDLK_k:  # k == '+'
+                    play_state.team.append(play_state.Boy())
                     game_framework.pop_state()
-                case pico2d.SDLK_MINUS:
-                    play_state.boy.num = 1
+                case pico2d.SDLK_j:  # j == '-'
+                    if play_state.team != []:
+                        play_state.team.pop()
                     game_framework.pop_state()
 
-            if event.key == SDLK_ESCAPE:
-                game_framework.pop_state()
+                    if event.key == SDLK_ESCAPE:
+                        game_framework.pop_state()
 
 
 # team = [play_state.Boy() for i in range(11)]

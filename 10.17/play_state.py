@@ -4,6 +4,7 @@ import logo_state
 import title_state
 import item_state
 import boy_state
+import random
 
 
 class Grass:
@@ -15,8 +16,8 @@ class Grass:
 
 class Boy:
     def __init__(self):
-        self.x, self.y = 0, 90
-        self.frame = 0
+        self.x, self.y =  random.randint(100,700), 90
+        self.frame = random.randint(0,7)
         self.dir = 1
         self.image = load_image('animation_sheet.png')
         self.ball_image = load_image('ball21x21.png')
@@ -34,7 +35,6 @@ class Boy:
             self.dir = 1
 
     def draw(self):
-
         if self.dir == 1:
             self.image.clip_draw(self.frame*100, 100, 100, 100, self.x, self.y)
         elif self.dir == -1:
@@ -61,8 +61,9 @@ def handle_events():
                 game_framework.push_state(boy_state)
 
 
-boy=None #None==NULL
-grass=None
+boy = None #None==NULL
+grass = None
+team = []
 # running=True
 
 open_canvas()
@@ -85,6 +86,9 @@ def exit():
 #world object update
 def update():
     boy.update()
+    for boy_team in team:
+        boy_team.update()
+
 
 #render world
 def draw():
@@ -96,6 +100,8 @@ def draw():
 def draw_world():
     grass.draw()
     boy.draw()
+    for boy_team in team:
+        boy_team.draw()
 
 
 def pause():
