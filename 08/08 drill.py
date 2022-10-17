@@ -61,6 +61,9 @@ def handle_events():
                 if state == 1:
                     state = 3
 
+             if (x > TUK_WIDTH or y > TUK_HEIGHT-90 or x < 0 or y < 90):
+            break
+
 open_canvas(TUK_WIDTH, TUK_HEIGHT)
 TUK_GROUND = load_image('TUK_GROUND.png')
 character = load_image('animation_sheet.png')
@@ -77,7 +80,6 @@ while running:
         y += dirY * 5
         delay(0.01)
 
-        if (x > TUK_WIDTH or y > TUK_HEIGHT-90 or x < 0 or y < 90):
-            break
+       
 
 close_canvas()
