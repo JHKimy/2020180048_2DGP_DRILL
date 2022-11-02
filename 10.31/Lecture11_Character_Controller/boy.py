@@ -124,16 +124,23 @@ class AUTO_RUN:
     # @staticmethod
     def do(self):  # 상태에 있을때 지속적으로 행하는 액션
         self.frame = (self.frame + 1) % 8
-        self.x += self.dir
+        self.x += self.face_dir*1
         self.x = clamp(0, self.x, 800)
+        if self.x >= 800:
+            self.x = 800
+            self.face_dir =-1
+        elif self.x <= 0:
+            self.x = 0
+            self.face_dir = 1
+
         pass
 
     # @staticmethod
     def draw(self):
         if self.face_dir == -1:
-            self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x , self.y)
+            self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x , self.y,200,200)
         else:
-            self.image.clip_draw(self.frame * 100, 100, 100, 100, self.x , self.y)
+            self.image.clip_draw(self.frame * 100, 100, 100, 100, self.x , self.y,200,200)
 
 
 # 실행 변황 기술

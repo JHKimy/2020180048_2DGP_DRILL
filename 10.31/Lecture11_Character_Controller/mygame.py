@@ -1,6 +1,5 @@
 import game_framework
 import pico2d
-
 import play_state
 
 pico2d.open_canvas()
