@@ -12,9 +12,6 @@ key_event_table = {
     (SDL_KEYDOWN, SDLK_a): A
 }
 
-global dir, face_dir
-
-
 class IDLE:
     # @staticmethod
     def enter(self, event):  # 상태에 들어갈 때 행하는 액션
@@ -46,7 +43,7 @@ class IDLE:
 
 class RUN:
     @staticmethod
-    def enter(self, event):
+    def enter(self,event):
         print('run idle')
         # 방향을 결정 해야하는데 , 뭘 근거로 ? 어떤 키가 눌렸기때문에
         if event == RD:
@@ -145,7 +142,7 @@ class AUTO_RUN:
 
 # 실행 변황 기술
 next_state = {
-    AUTO_RUN: { RD: RUN, LD: RUN, A: IDLE },
+    AUTO_RUN: { RD: RUN, LD: RUN, RU: AUTO_RUN, LU: AUTO_RUN, A: IDLE },
     SLEEP: {RD: RUN, LD: RUN, RU: RUN, LU: RUN, TIMER: SLEEP},
     IDLE: {RU: RUN, LU: RUN, RD: RUN, LD: RUN, TIMER: SLEEP, A: AUTO_RUN},
     RUN: {RU: IDLE, LU: IDLE, RD: IDLE, LD: IDLE, A: AUTO_RUN}

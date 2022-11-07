@@ -38,7 +38,7 @@ def handle_events():
 
 open_canvas()
 
-team = [Boy() for i in range(1000)]
+team = [Boy() for i in range(100)]
 
 
 grass = Grass()
@@ -47,13 +47,19 @@ running = True;
 while running:
     handle_events()
 
-    for boy in team:
-        boy.update()
+
 
     clear_canvas()
     grass.draw()
+
+    for boy in team:
+        boy.update()
+
     for boy in team:
         boy.draw()
+
+
+
     update_canvas()
 
     delay(0.05)
